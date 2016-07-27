@@ -171,8 +171,7 @@ def parse_diag_msg(data):
     # Alternatively, in Python 2.7+/3.3+,  you can use lib ipaddress to
     # convert this 32-bit packed binary to a ip string
     little_end_src = struct.pack('!I', message.id.idiag_src[0])
-    ip = socket.inet_ntoa(little_end_src)
-    return ip, message.id.idiag_sport
+    return socket.inet_ntoa(little_end_src), message.id.idiag_sport
 
 
 if __name__ == "__main__":
