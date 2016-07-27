@@ -1,13 +1,12 @@
 /*
  *	inet_diag_req version 1 test on kernel 2.6.32
- *	
- *	
+ *	author: web <liuangc33@gmail.com>
  */
 
 
 #include <errno.h>
-#include <unistd.h>
 #include <stdio.h>
+#include <unistd.h>
 #include <sys/socket.h>
 #include <linux/inet_diag.h>
 #include <linux/netlink.h>
@@ -49,7 +48,7 @@ int main(int argc, char *argv[]) {
             },
             .r = {
                     .idiag_family = AF_INET,
-                    .idiag_states = (1 << 10), // TCP_LISTEN
+                    .idiag_states = (1 << 10), // TCP_LISTEN, change it to monitor other states 
                     .id = {
                             .idiag_cookie[0] = INET_DIAG_NOCOOKIE,
                             .idiag_cookie[1] = INET_DIAG_NOCOOKIE,
