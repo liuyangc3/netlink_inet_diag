@@ -12,7 +12,7 @@
 #include <sys/socket.h>
 #include <linux/netlink.h>
 #include <netinet/in.h>
-#include "sock_diag.h"
+#include <linux/sock_diag.h>
 #include <linux/inet_diag.h>
 #include <arpa/inet.h>
 #include <pwd.h>
